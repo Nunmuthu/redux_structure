@@ -1,19 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { DECREMENT, INCREMENT } from './store/actions/count.action';
 
 class Counter extends React.Component {
   increment = () => {
-    this.props.dispatch({ type: 'INCREMENT' });
+    this.props.dispatch({ type: INCREMENT });
   }
 
   decrement = () => {
-    this.props.dispatch({ type: 'DECREMENT' });
+    this.props.dispatch({ type: DECREMENT });
   }
 
   render() {
     return (
       <div>
-        <h2>Counter</h2>
+        <h2>Counter Modified</h2>
         <div>
           <button onClick={this.decrement}>-</button>
           <span>{this.props.count}</span>
